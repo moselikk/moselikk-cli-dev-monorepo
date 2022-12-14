@@ -16,6 +16,9 @@ composer.lock
 # Project Specific
 /node_modules
 /**/**/node_modules/
+/**/**/package-lock.json/
+package-lock.json
+lerna-debug.log
 *.log
 /lib
 tmp
