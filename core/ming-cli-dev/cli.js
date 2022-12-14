@@ -4,7 +4,7 @@
 
 const cli = require('@lerna/cli');
 
-console.log('hello ming-ming-cli-dev is running');
+console.log('hello ming-ming-cli111-dev is running');
 
 console.log(cli());
 

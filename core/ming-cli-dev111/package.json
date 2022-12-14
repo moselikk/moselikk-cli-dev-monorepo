@@ -1,0 +1,17 @@
+{
+  "name": "ming-cli-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../ming-cli-dev/index.js",
+  "bin": {
+    "ming-cli-dev": "../ming-cli-dev/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@ming-cli-dev/cli": "file:../cli"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,14 +1,19 @@
 {
-  "name": "@ming-cli-dev/cli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "cli",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Moselikk <moselikk@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/cli.js",
+  "directories": {
+    "lib": "index.js",
+    "test": "__tests__"
+  },
   "files": [
     "index.js"
   ],
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "test": "node ./__tests__/cli.test.js"
+  }
 }

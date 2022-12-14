@@ -95,6 +95,7 @@
         "space-before-blocks": [
             "error",
             "always"
-        ]
+        ],
+        "no-use-before-define": "off"
     }
 }

@@ -1,17 +1,21 @@
 {
   "name": "ming-cli-dev",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Moselikk <moselikk@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/ming-cli-dev.js",
   "bin": {
     "ming-cli-dev": "cli.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "directories": {
+    "test": "__tests__"
   },
   "dependencies": {
     "@ming-cli-dev/cli": "file:../cli"
   },
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "test": "node ./__tests__/ming-cli-dev.test.js"
+  }
 }

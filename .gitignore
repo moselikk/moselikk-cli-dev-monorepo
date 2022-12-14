@@ -1,7 +1,21 @@
-node_modules/
+
+
+# IDE Specific
+nbproject
+.~lock.*
+.buildpath
+.idea
+.project
+.settings
+.vscode
+composer.lock
+*.sublime-workspace
+*.swp
+*.swo
 
 # Project Specific
 /node_modules
+/**/**/node_modules/
 *.log
 /lib
 tmp
