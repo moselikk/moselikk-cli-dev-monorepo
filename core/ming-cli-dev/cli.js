@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 
-"use strict";
+'use strict';
 
-const cli = require("@lerna/cli");
+const cli = require('@lerna/cli');
 
-console.log('hello ming-ming-cli-dev is running')
+console.log('hello ming-ming-cli-dev is running');
 
-console.log(cli())
-
+console.log(cli());
 

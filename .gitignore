@@ -1,1 +1,12 @@
 node_modules/
+
+# Project Specific
+/node_modules
+*.log
+/lib
+tmp
+.changelog
+coverage/
+.nyc_output/
+.eslintcache
+.env
