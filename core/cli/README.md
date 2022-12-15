@@ -1,4 +1,4 @@
-# `cli`
+# `@moselikk-cli-dev/cli`
 
 > TODO: description
 

@@ -14,6 +14,9 @@
     "lib"
   ],
   "scripts": {
-    "test": "node ./__tests__/log.test.js"
+    "test": "node __tests__/log.test.js"
+  },
+  "dependencies": {
+    "npmlog": "^7.0.1"
   }
 }

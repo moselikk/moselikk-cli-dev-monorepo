@@ -2,11 +2,14 @@
 
 'use strict';
 
-const cli = require('@moselikk-cli-dev/cli');
+const importLocal = require('import-local');
 const log = require('@moselikk-cli-dev/log');
 
-console.log('hello ming-ming-cli111-dev is running');
+if (importLocal(__filename)) {
+  log.info('cli', '正在使用 moselikk-cli-dev 本地版本');
+} else {
+  // eslint-disable-next-line global-require
+  require('.')(process.argv.slice(2));
+}
 
-console.log(cli());
-console.log(log());
 

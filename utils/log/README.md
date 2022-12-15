@@ -1,4 +1,4 @@
-# `log`
+# `@moselikk-cli-dev/log`
 
 > TODO: description
 

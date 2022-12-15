@@ -1,4 +1,4 @@
-# `ming-cli-dev`
+# `moselikk-cli-dev`
 
 > TODO: description
 
