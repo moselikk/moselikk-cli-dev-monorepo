@@ -1,6 +1,6 @@
 {
   "name": "moselikk-cli-dev",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Moselikk <moselikk@gmail.com>",
   "homepage": "",
@@ -27,5 +27,5 @@
   "scripts": {
     "test": "node ./__tests__/ming-cli-dev.test.js"
   },
-  "gitHead": "40fcac802a2140f3baedb35f3b2799571f0d6719"
+  "gitHead": "e65316224ee4d32373de83a3f67c676fc93b84bf"
 }
