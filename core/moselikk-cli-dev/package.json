@@ -16,9 +16,13 @@
     "@moselikk-cli-dev/cli": "file:../cli",
     "@moselikk-cli-dev/log": "file:../../utils/log",
     "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
     "import-local": "^3.1.0",
+    "minimist": "^1.2.7",
+    "path-exists": "4",
     "root-check": "^1.0.0",
-    "semver": "^7.3.8"
+    "semver": "^7.3.8",
+    "user-home": "^3.0.0"
   },
   "scripts": {
     "test": "node ./__tests__/ming-cli-dev.test.js"
