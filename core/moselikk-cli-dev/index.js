@@ -11,7 +11,7 @@ const pkg = require('./package.json');
 
 let args;
 
-function main() {
+async function main() {
   try {
     checkInputArgs();
     checkNodeVersion();
@@ -19,6 +19,7 @@ function main() {
     checkRoot();
     checkUserHome();
     checkEnv();
+    await checkGlobalUpdate();
 
     log.test('测试', 'log模块正常运行了');
     log.verbose('debug', '当前为调试模式');
@@ -97,6 +98,22 @@ function createDefaultConfig() {
     cliConfig['cliHome'] = path.join(userHome, constant.DEFAULT_CLI_HOME);
   }
   process.env.CLI_HOME_PATH = cliConfig.cliHome;
+}
+
+async function checkGlobalUpdate() {
+  // 获取当前版本号和模块名
+  const currentVersion = pkg.version;
+  const npmName = pkg.name;
+  // 调用npm API，获取所有版本号
+  // eslint-disable-next-line global-require
+  const { getNpmSemverVersions } = require('@moselikk-cli-dev/get-npm-info');
+  const lastVersion = await getNpmSemverVersions(currentVersion, npmName);
+  if (lastVersion && semver.gt(lastVersion, currentVersion)) {
+    log.warn(colors.yellow(`请手动更新${npmName}, 当前版本: ${currentVersion}, 最新版本:${lastVersion}
+              更新命令：npm install -g ${npmName}`));
+  }
+  // 提取所有版本号，比对大于当前版本号
+  // 获取最新版本号，提示用户更新到当前版本号
 }
 
 module.exports = main;
