@@ -1,6 +1,6 @@
 {
   "name": "moselikk-cli-dev",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "> TODO: description",
   "author": "Moselikk <moselikk@gmail.com>",
   "homepage": "",
@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@moselikk-cli-dev/cli": "file: ../cli",
-    "@moselikk-cli-dev/log": "file: ../../utils/log",
     "@moselikk-cli-dev/get-npm-info": "file: ../../utils/get-npm-info",
+    "@moselikk-cli-dev/log": "file: ../../utils/log",
     "colors": "^1.4.0",
     "dotenv": "^16.0.3",
     "import-local": "^3.1.0",

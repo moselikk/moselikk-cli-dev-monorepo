@@ -1,5 +1,4 @@
 # IDE Specific
-nbproject
 .~lock.*
 .buildpath
 .idea
@@ -18,10 +17,6 @@ composer.lock
 package-lock.json
 lerna-debug.log
 *.log
-/lib
-tmp
 .changelog
-coverage/
 .nyc_output/
 .eslintcache
-.env
