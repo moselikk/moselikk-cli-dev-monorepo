@@ -1,22 +1,8 @@
 # IDE Specific
-.~lock.*
-.buildpath
 .idea
-.project
-.settings
 .vscode
-composer.lock
-*.sublime-workspace
-*.swp
-*.swo
 
 # Project Specific
 /node_modules
 /**/**/node_modules/
-/**/**/package-lock.json/
 package-lock.json
-lerna-debug.log
-*.log
-.changelog
-.nyc_output/
-.eslintcache
