@@ -114,6 +114,7 @@ async function checkGlobalUpdate() {
   }
   // 提取所有版本号，比对大于当前版本号
   // 获取最新版本号，提示用户更新到当前版本号
+  // 测试
 }
 
 module.exports = main;
