@@ -1,4 +1,5 @@
-9 error Error: A GH_TOKEN environment variable is required.
-9 error     at createGitHubClient (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/@lerna/github-client/lib/github-client.js:17:11)
-9 error     at createReleaseClient (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/@lerna/version/lib/create-release.js:20:14)
-9 error     at VersionCommand.configureProperties (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/@lerna/version/index.js:83:58)
+66 error Error: Command failed with exit code 128: git push --follow-tags --no-verify --atomic origin main
+66 error remote: Invalid username or password.
+66 error fatal: Authentication failed for 'https://github.com/moselikk/moselikk-cli-dev-monorepo.git/'
+66 error     at makeError (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/execa/lib/error.js:60:11)
+66 error     at handlePromise (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/execa/index.js:118:26)
