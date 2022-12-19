@@ -1,5 +1,17 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "useWorkspaces": true,
-  "version": "0.0.2"
+  "version": "0.0.2",
+  "command": {
+    "publish": {
+      "tempTag": true
+    },
+    "version": {
+      "conventionalCommits": true,
+      "createRelease": "github",
+      "exact": true,
+      "message": "chore(release): %s"
+    }
+
+  }
 }

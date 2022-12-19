@@ -1,10 +1,4 @@
-55 error Error: Command failed with exit code 1: git add -- utils/log/package.json core/moselikk-cli-dev/package.json core/cli/package.json utils/get-npm-info/package.json lerna.json package-lock.json
-55 error The following paths are ignored by one of your .gitignore files:
-55 error package-lock.json
-55 error hint: Use -f if you really want to add them.
-55 error hint: Turn this message off by running
-55 error hint: "git config advice.addIgnoredFile false"
-55 error     at makeError (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/execa/lib/error.js:60:11)
-55 error     at handlePromise (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/execa/index.js:118:26)
-55 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-55 error     at async Promise.all (index 0)
+9 error Error: A GH_TOKEN environment variable is required.
+9 error     at createGitHubClient (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/@lerna/github-client/lib/github-client.js:17:11)
+9 error     at createReleaseClient (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/@lerna/version/lib/create-release.js:20:14)
+9 error     at VersionCommand.configureProperties (/home/ubuntu/ming-code/moselikk-cli-dev-monorepo/node_modules/@lerna/version/index.js:83:58)
