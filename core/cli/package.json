@@ -3,7 +3,6 @@
   "version": "0.0.7",
   "description": "> TODO: description",
   "author": "Moselikk <moselikk@gmail.com>",
-  "homepage": "",
   "license": "ISC",
   "main": "index.js",
   "directories": {

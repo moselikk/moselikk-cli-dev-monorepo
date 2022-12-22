@@ -1,18 +1,10 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "0.0.7",
-  "packages": [
-    "commands/*",
-    "core/*",
-    "utils/*",
-    "models/*"
-  ],
   "command": {
     "publish": {
       "tempTag": true
-    },
-    "version": {
-      "exact": true
     }
-  }
+  },
+  "useWorkspaces": true
 }
