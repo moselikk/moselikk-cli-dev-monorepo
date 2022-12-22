@@ -1,10 +1,9 @@
 {
   "name": "@moselikk-cli-dev/log",
   "version": "0.0.8",
-  "description": "> TODO: description",
   "author": "Moselikk <moselikk@gmail.com>",
   "homepage": "",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/log.js",
   "directories": {
     "lib": "lib",

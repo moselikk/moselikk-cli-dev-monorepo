@@ -1,10 +1,9 @@
 {
   "name": "@moselikk-cli-dev/init",
   "version": "0.0.8",
-  "description": "> TODO: description",
   "author": "Moselikk <moselikk@gmail.com>",
   "homepage": "https://github.com/moselikk/moselikk-cli-dev-monorepo#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
