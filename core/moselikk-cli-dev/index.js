@@ -4,22 +4,27 @@ const semver = require('semver');
 const constant =require('./lib/const');
 const userHome = require('user-home');
 const pathExists = require('path-exists');
+const commander = require('commander');
 const colors = require('colors');
 const log = require('@moselikk-cli-dev/log');
 const cli = require('@moselikk-cli-dev/cli');
+const init = require('@moselikk-cli-dev/init');
 const pkg = require('./package.json');
 
 let args;
 
+const program = new commander.Command();
+
 async function main() {
   try {
-    checkInputArgs();
+    // checkInputArgs();
     checkNodeVersion();
     checkPkgVersion();
     checkRoot();
     checkUserHome();
     checkEnv();
     await checkGlobalUpdate();
+    registerCommand();
 
     log.test('测试', 'log模块正常运行了');
     log.verbose('debug', '当前为调试模式');
@@ -28,6 +33,51 @@ async function main() {
     log.error(e.message);
   }
 
+}
+
+// 注册命令
+function registerCommand() {
+  program
+    .name(Object.keys(pkg.bin)[0])
+    .usage('<command> [options]')
+    .version(pkg.version)
+    .option('-d, --debug', '是否开启调试模式', false)
+    .option('-tp, --targetPath <targetPath>', '是否指定本地调试文件路径', '');
+
+  // 注册init命令
+  program
+    .command('init [projectName]')
+    .option('-f, --force', '是否强制初始化项目')
+    .action(init);
+
+  // 开启debug模式
+  program.on('option:debug', function () {
+    if (program.opts().debug) {
+      process.env.LOG_LEVEL = 'verbose';
+    } else {
+      process.env.LOG_LEVEL = 'info';
+    }
+    log.level = process.env.LOG_LEVEL;
+  });
+
+  // program.on('option:targetPath' );
+
+  // 未知命令处理
+  program.on('command:*', function (obj) {
+    const availableCommands = program.commands.map(cmd => cmd.name());
+    console.log(colors.red('未知的命令' + obj[0]));
+    if (availableCommands.length > 0) {
+      console.log(colors.red('可用命令' + availableCommands.join(',')));
+    }
+  });
+
+  program.parse(process.argv);
+
+  // 不存在的命令，输出help内容
+  if (program.args && program.args.length < 1) {
+    program.outputHelp();
+    console.log();
+  }
 }
 
 
@@ -65,7 +115,7 @@ function checkInputArgs() {
   // eslint-disable-next-line global-require
   const minimist = require('minimist');
   args = minimist(process.argv.slice(2));
-  checkArgs();
+  // checkArgs();
 }
 
 function checkArgs() {

@@ -34,8 +34,6 @@ async function getNpmVersions(npmName, registry) {
 }
 
 function getSemverVersions(baseVersion, versions) {
-  versions.unshift('0.0.4');
-
   // 筛选出大于现在版本的线上版本
   return versions
     .filter(version =>
@@ -49,6 +47,8 @@ async function getNpmSemverVersions(baseVersion, npmName, registry ) {
   if (newVersions && newVersions.length > 0) {
     return newVersions[0];
   }
+
+  return null;
 }
 
 module.exports = {

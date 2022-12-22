@@ -13,10 +13,12 @@
     "test": "__tests__"
   },
   "dependencies": {
-    "@moselikk-cli-dev/cli": "0.0.6",
-    "@moselikk-cli-dev/get-npm-info": "0.0.6",
-    "@moselikk-cli-dev/log": "0.0.6",
+    "@moselikk-cli-dev/cli": "file: ../cli",
+    "@moselikk-cli-dev/get-npm-info": "file: ../../utils/get-npm-info",
+    "@moselikk-cli-dev/log": "file: ../../utils/log",
+    "@moselikk-cli-dev/init": "file: ../../commands/init",
     "colors": "^1.4.0",
+    "commander": "^9.4.1",
     "dotenv": "^16.0.3",
     "import-local": "^3.1.0",
     "minimist": "^1.2.7",
